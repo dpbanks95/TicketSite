@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>  
+	<head>    
+		<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+		<title>TicketSite</title>	
+	</head>  
+<body>	
+    
+    <h3>Add Customer record</h3>
+    
+    <form action = "addCustomer" method = "post" >
+        CustomerID <input type = "text" name = "id" ></br>
+        Name <input type = "text" name = "name" ></br>
+        Email <input type = "email" name = "email" ></br>
+        <input type = "submit" value = "Add Customer" >
+    </form>
+    
+    {{msg1}}</br>
+    {{error1}}</br>
+    <hr>
+    <h3>Add Ticket</h3>
+    
+    <form action = "addTicket" method = "post" >
+        ticketID <input type = "text" name = "ticketID"></br>
+        problem <input type = "text" name = "problem"></br>
+        
+        Status <select name="status">
+            <option value="open">open</option>
+            <option value="closed">closed</option>
+        </select></br>
+        
+        Priority <select name="priority">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select></br>
+        
+        customerID <input type = "text" name = "customerID"></br>
+        productID <input type = "text" name = "productID"></br>
+        <input type = "submit" value = "Add Ticket">
+    </form>
+    </br>
+    {{msg2}}</br>
+    {{error2}}
+    {{msg3}}
+    {{msg4}}
+    {{msg5}}
+    {{msg6}}
+    {{msg7}}
+    {{msg8}} 
+    <hr>
+    <h3>Update Ticket</h3>
+    
+    <form action = "updateTicket" method = "post" >
+        UpdateID <input type = "text" name = "id" ></br>
+        Message <input type = "text" name = "message" ></br>
+        TicketID <input type = "text" name = "ticketID" ></br>
+        StaffID <input type = "text" placeholder="Blank for Customer Update" name = "staffID" ></br>
+        <input type = "submit" value = "Update Ticket" >
+    </form>
+    
+    {{ticketUpdate}}</br>
+    {{error3}}
+
+    <hr>
+    <h3>Close Ticket</h3>
+    
+    <form action = "closeTicket" method = "post" >
+        TicketID <input type = "text" name = "ticketID" ></br>
+        <input type = "submit" value = "Close Ticket" >
+    </form>
+    
+    {{closeTicket}}</br>
+    {{error4}}
+
+    <hr>
+    <h3>Get Open Tickets</h3>
+    
+    <form action = "openTickets" method = "get" >
+        <input type = "submit" value = "View Open Tickets" >
+    </form>
+    
+    {{openTickets}}</br>
+    {{error5}}
+
+    <hr>
+    <h3>Get Ticket</h3>
+    
+    <form action = "getTicket" method = "get" >
+        TicketID <input type = "text" name = "ticketID" ></br>
+        <input type = "submit" value = "Get ticket" >
+    </form>
+    
+    {{getTicket}}</br>
+    {{error6}}
+
+    <hr>
+    <h3>Closed Ticket Report</h3>
+    
+    <form action = "closedTickets" method = "get" >
+        <input type = "submit" value = "View Closed Tickets" >
+    </form>
+    
+    {{closedTickets}}</br>
+    {{error7}}
+
+    <hr>
+    <h3>Close Old Tickets</h3>
+    
+    <form action = "closeOldTickets" method = "get" >
+        <input type = "submit" value = "close Old Tickets" >
+    </form>
+    
+    {{closeOldTickets}}</br>
+    {{error8}}
+
+    <hr>
+    <h3>Delete Customer</h3>
+    <p>(Customer can only be deleted when not associated with a ticket)</p>
+    
+    <form action = "deleteCustomer" method = "post" >
+        CustomerID <input type = "text" name = "customerID" ></br>
+        <input type = "submit" value = "Delete Customer" >
+    </form>
+    
+    {{deleteCustomer}}</br>
+    {{error9}}
+
+</body>
+
+</html>

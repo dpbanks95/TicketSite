@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>  
+	<head>    
+		<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+		<title>TicketSite</title>	
+	</head>  
+<body>	
+
+    <h3>Info for TicketID: {{ticketID}}</h3>
+    
+    <table border = 1>
+        <tr>
+            <th>ID</th> <th>Original Problem</th> <th>Update Message </th> <th> Update Time </th> <th> Updated By </th>
+                </tr>
+                    {% for row in rows %}
+                    <tr>
+                        {% for item in row%}
+                        <td>
+                            {{item}}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    
+    <form action = "/" >
+        <input type = "submit" value = "Return" >
+    </form>
+</body>
+
+</html>

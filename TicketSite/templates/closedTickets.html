@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>  
+	<head>    
+		<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+		<title>TicketSite</title>	
+	</head>  
+<body>	
+
+    <h3>Closed Ticket(s)</h3>
+    <table border = 1>
+        <tr>
+            <th>ID</th> <th>Problem</th> <th>Num of Updates </th> <th> First Update </th> <th> Last Update </th>
+                </tr>
+                    {% for row in rows %}
+                    <tr>
+                        {% for item in row%}
+                        <td>
+                            {{item}}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    
+    <form action = "/" >
+        <input type = "submit" value = "Return" >
+    </form>
+</body>
+
+</html>
